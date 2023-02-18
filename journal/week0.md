@@ -3,7 +3,7 @@
 ## Required Homework ##
 
 ### Lucid Chart Diagram ###
-image here
+![Diagram]([https://github.com/farooqbutt919/aws-cruddur-faroooq.cloud/blob/main/journal/assets/awscli.png](https://github.com/farooqbutt919/aws-cruddur-faroooq.cloud/blob/main/journal/assets/cruddur.png))
 
 ```
 https://lucid.app/lucidchart/32a60b70-65bb-49ee-a181-1f36be530ea9/edit?viewport_loc=-710%2C353%2C3072%2C1293%2C0_0&invitationId=inv_dfeed5a0-adb3-48db-82de-8bb0cc67f2e4
@@ -17,4 +17,4 @@ I was able to install AWS CLI without any challenger. I also researched about ho
 aws s3 ls --profile farooq 
 aws s3 ls --profile farooq2
 
-image here
+!.[Diagram].([assets/awscli.png](https://github.com/farooqbutt919/aws-cruddur-faroooq.cloud/blob/main/journal/assets/awscli.png))
