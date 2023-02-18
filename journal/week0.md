@@ -27,8 +27,8 @@ aws s3 ls --profile farooq2
 
 ### AWS Budgets ### 
 I setup 2 budgets. 
-![Budget](assets/aws budget.png)
+![Budget](assets/budget.png)
 
 ### AWS SUpport case ###
-Trying my luck! 
+I created a support case requesting for some credits to try out my cruddur app. TryingMyLuck!
 ![Credits](assets/case.png)
