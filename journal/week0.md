@@ -26,5 +26,9 @@ aws s3 ls --profile farooq2
 ![Diagram](assets/awscli.png)
 
 ### AWS Budgets ### 
-!.[Budget](assets/aws%20budget.png)
+I setup 2 budgets. 
+![Budget](assets/aws budget.png)
 
+### AWS SUpport case ###
+Trying my luck! 
+![Credits](assets/case.png)
