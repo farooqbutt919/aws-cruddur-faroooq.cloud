@@ -17,4 +17,4 @@ I was able to install AWS CLI without any challenger. I also researched about ho
 aws s3 ls --profile farooq 
 aws s3 ls --profile farooq2
 
-!.[Diagram].([assets/awscli.png](https://github.com/farooqbutt919/aws-cruddur-faroooq.cloud/blob/main/journal/assets/awscli.png))
+![Diagram]([https://github.com/farooqbutt919/aws-cruddur-faroooq.cloud/blob/main/journal/assets/awscli.png))
