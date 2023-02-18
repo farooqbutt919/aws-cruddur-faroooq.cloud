@@ -10,10 +10,11 @@ https://lucid.app/lucidchart/32a60b70-65bb-49ee-a181-1f36be530ea9/edit?viewport_
 
 ```
 
-### AWS CLI ###
+### AWS CLI and Cloud Shell###
 
-I was able to install AWS CLI. I also researched about how to use CLI for multiple users and came across --profile parameter. I created 2 IAM users(farooq1 and farooq2) and generated 2 set of credentials. I was able to switch AWS CLI credentials by using --profile parameter.
+I was able to install AWS CLI without any challenger. I also researched about how to use CLI for multiple users and came across --profile parameter. I created 2 IAM users(farooq and farooq2) and generated 2 set of credentials. I was able to switch AWS CLI credentials by using --profile parameter.
 
-aws s3 ls --profile farooq1 
+aws s3 ls --profile farooq 
 aws s3 ls --profile farooq2
 
+image here
