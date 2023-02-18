@@ -24,3 +24,7 @@ aws s3 ls --profile farooq <br>
 aws s3 ls --profile farooq2
 
 ![Diagram](assets/awscli.png)
+
+### AWS Budgets ### 
+!.[Budget](assets/aws%20budget.png)
+
