@@ -6,11 +6,11 @@ Lot of time spent troubleshooting and making things work. I am trying to underst
 ## Required Homework ##
 
 ### AWS XRAY ###
-![Diagram](assets/hw-xray.png)
+![Diagram](../_docs/assets/hw-xray.png)
 
 
 
 ### AWS Cloudwatch ###
 
-![Diagram](assets/hw-cw.png)
+![Diagram](../_docs/assets/hw-cw.png)
 
