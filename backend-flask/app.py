@@ -55,6 +55,15 @@ FlaskInstrumentor().instrument_app(app)
 RequestsInstrumentor().instrument()
 
 
+##ROLLBAR
+from time import strftime
+import os
+import rollbar
+import rollbar.contrib.flask
+from flask import got_request_exception
+
+
+
 frontend = os.getenv('FRONTEND_URL')
 backend = os.getenv('BACKEND_URL')
 origins = [frontend, backend]
@@ -65,6 +74,13 @@ cors = CORS(
   allow_headers="content-type,if-modified-since",
   methods="OPTIONS,GET,HEAD,POST"
 )
+
+## ROll bar test endpoint
+@app.route('/rollbar/test')
+def rollbar_test():
+    rollbar.report_message('Hello World! ', 'warning')
+    return "Hello World!, This is not an ordinary hello world. This hello world comes from Andrew Brown's week2 task related to OBSERVABILITY. \n We are trying to integrate rollbar into our django backend app \n "
+
 
 @app.route("/api/message_groups", methods=['GET'])
 def data_message_groups():
@@ -86,6 +102,24 @@ def data_messages(handle):
   else:
     return model['data'], 200
   return
+
+### ROLL BAR 
+rollbar_access_token = os.getenv('ROLLBAR_ACCESS_TOKEN')
+@app.before_first_request
+def init_rollbar():
+    """init rollbar module"""
+    rollbar.init(
+        # access token
+        rollbar_access_token,
+        # environment name
+        'production',
+        # server root directory, makes tracebacks prettier
+        root=os.path.dirname(os.path.realpath(__file__)),
+        # flask already sets up logging
+        allow_logging_basic_config=False)
+
+    # send exceptions from `app` to rollbar, using flask's signal system.
+    got_request_exception.connect(rollbar.contrib.flask.report_exception, app)
 
 @app.route("/api/messages", methods=['POST','OPTIONS'])
 @cross_origin()
