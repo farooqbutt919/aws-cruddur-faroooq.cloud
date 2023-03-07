@@ -13,21 +13,23 @@ export default function SigninPage() {
   const [errors, setErrors] = React.useState('');
 
 
+
   const onsubmit = async (event) => {
     setErrors('')
     event.preventDefault();
-    Auth.signIn(email, password)
-    .then(user => {
-      console.log('user',user)
-      localStorage.setItem("access_token", user.signInUserSession.accessToken.jwtToken)
-      window.location.href = "/"
-    })
-    .catch(error => { 
+    try {
+      Auth.signIn(username, password)
+        .then(user => {
+          localStorage.setItem("access_token", user.signInUserSession.accessToken.jwtToken)
+          window.location.href = "/"
+        })
+        .catch(err => { console.log('Error!', err) });
+    } catch (error) {
       if (error.code == 'UserNotConfirmedException') {
         window.location.href = "/confirm"
       }
-      setErrors(error.message)
-    });
+      setErrors('')
+    }
     return false
   }
 
